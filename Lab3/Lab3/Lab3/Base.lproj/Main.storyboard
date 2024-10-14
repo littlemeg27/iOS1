@@ -90,8 +90,7 @@
                         <outlet property="alphaLabel" destination="4ru-zq-qv6" id="vvv-zP-MAL"/>
                         <outlet property="blueLabel" destination="w0W-fB-4W4" id="xoh-hX-LW0"/>
                         <outlet property="greenLabel" destination="ZcY-OM-iQC" id="USL-zy-2WF"/>
-                        <outlet property="labelRed" destination="od7-2p-5Cx" id="IUU-3L-Xac"/>
-                        <outlet property="redLabel" destination="8bC-Xf-vdC" id="nmj-uU-sqf"/>
+                        <outlet property="redLabel" destination="od7-2p-5Cx" id="k8f-iZ-WCr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

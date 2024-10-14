@@ -9,14 +9,16 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    @IBOutlet var redLabel: UILabel!
-    @IBOutlet var greenLabel: UILabel!
-    @IBOutlet var blueLabel: UILabel!
-    @IBOutlet var alphaLabel: UILabel!
+    @IBOutlet weak var redLabel: UILabel!
+    @IBOutlet weak var greenLabel: UILabel!
+    @IBOutlet weak var blueLabel: UILabel!
+    @IBOutlet weak var alphaLabel: UILabel!
     @IBAction func SecondScreenButton(_ sender: Any)
     {
         
     }
+    
+    var numbersToSend: (redString: String, greenString: String, blueString: String, alphaString: String)?
     
     override func viewDidLoad()
     {
@@ -46,6 +48,16 @@ class ViewController: UIViewController
         blueLabel.textColor = UIColor.black
         greenLabel.textColor = UIColor.black
         alphaLabel.textColor = UIColor.black
+        
+        
+        
+        if let SecondScreenViewController = numbersToSend
+        {
+            redLabel.text = SecondScreenViewController.redString
+            blueLabel.text = SecondScreenViewController.greenString
+            greenLabel.text = SecondScreenViewController.blueString
+            alphaLabel.text = SecondScreenViewController.alphaString
+        }
     }
     
 
