@@ -14,6 +14,8 @@ class ViewController: UIViewController
     @IBOutlet weak var blueLabel: UILabel!
     @IBOutlet weak var alphaLabel: UILabel!
     @IBAction func SecondScreenButton(_ sender: Any)
+    
+    
     {
         
     }
@@ -48,15 +50,18 @@ class ViewController: UIViewController
         blueLabel.textColor = UIColor.black
         greenLabel.textColor = UIColor.black
         alphaLabel.textColor = UIColor.black
-        
-        
-        
-        if let SecondScreenViewController = numbersToSend
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+            let secondVC: SecondViewController = segue.destination as! SecondViewController
+            
+        if var redNumber = redLabel.text,
+           var greenNumber = greenLabel.text,
+           var blueNumber = blueLabel.text,
+           var alphaNumber = alphaLabel.text
         {
-            redLabel.text = SecondScreenViewController.redString
-            blueLabel.text = SecondScreenViewController.greenString
-            greenLabel.text = SecondScreenViewController.blueString
-            alphaLabel.text = SecondScreenViewController.alphaString
+            
         }
     }
     

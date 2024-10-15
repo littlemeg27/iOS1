@@ -146,19 +146,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Dismiss" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfj-Bp-O7b" userLabel="Dismiss" customClass="Dismiss">
-                                <rect key="frame" x="19" y="46" width="84" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="Dismiss" label="Dismiss"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Dismiss"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAd-F5-a4r" userLabel="RandomizeColorsButton">
                                 <rect key="frame" x="115" y="687" width="163" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="RandomizeColorsButton" label="RandomizeColorsButton"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Randomize Colors"/>
+                                <connections>
+                                    <action selector="randomizeColors" destination="5go-Yg-lnJ" eventType="touchUpInside" id="CfQ-rL-3om"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alpha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9C-iN-u1o">
                                 <rect key="frame" x="174" y="509" width="44" height="21"/>
@@ -167,13 +163,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIL-v2-QEl">
+                                <rect key="frame" x="12" y="50" width="84" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissViewController" destination="5go-Yg-lnJ" eventType="touchUpInside" id="SRi-jr-8LJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XvQ-d4-XgH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="6b5-Sx-vvG"/>
                     <connections>
-                        <outlet property="RandomizeColorsButton" destination="yAd-F5-a4r" id="g73-8N-ZU3"/>
+                        <outlet property="RandomizeColorsButton" destination="yAd-F5-a4r" id="3OH-xq-Pfz"/>
                         <outlet property="alphaSlider" destination="bLj-nB-n3o" id="KoU-RY-TPf"/>
                         <outlet property="blueSlider" destination="boZ-FX-oNr" id="oTj-EQ-KId"/>
                         <outlet property="greenSlider" destination="iyq-Ju-SQY" id="Lv2-62-j2H"/>
