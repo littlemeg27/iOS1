@@ -44,6 +44,11 @@ class SecondViewController: UIViewController
         greenLabelFloat = greenSlider.value
         blueLabelFloat = blueSlider.value
         alphaLabelFloat = alphaSlider.value
+        
+        let redSliderValue = redSlider.value
+        let greenSliderValue = greenSlider.value
+        let blueSliderValue = blueSlider.value
+        let alphaSliderValue = alphaSlider.value
     }
     
     @IBAction func dismissViewController()
