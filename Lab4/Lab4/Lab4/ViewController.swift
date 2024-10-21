@@ -70,7 +70,79 @@ class ViewController: UIViewController
         NorthAmericaLabel.text = "There are \(totalCountries) countries in North America, with a total population of \(totalPopulation) people."
     }
     
-    @IBAction func continentButtonTapped(_ sender: UIButton)
+    func updateSouthAmericaLabel()
+    {
+        let totalCountries = World.values.reduce(0) { $0 + $1.count }
+        let totalPopulation = World.values.reduce(0) { ($1["population"] as? Int) ?? 0}
+        NorthAmericaLabel.text = "There are \(totalCountries) countries in North America, with a total population of \(totalPopulation) people."
+    }
+    
+    func updateEuropeLabel()
+    {
+        let totalCountries = World.values.reduce(0) { $0 + $1.count }
+        let totalPopulation = World.values.reduce(0) { ($1["population"] as? Int) ?? 0}
+        NorthAmericaLabel.text = "There are \(totalCountries) countries in North America, with a total population of \(totalPopulation) people."
+    }
+    
+    func updateEuropeLabel()
+    {
+        let totalCountries = World.values.reduce(0) { $0 + $1.count }
+        let totalPopulation = World.values.reduce(0) { ($1["population"] as? Int) ?? 0}
+        NorthAmericaLabel.text = "There are \(totalCountries) countries in North America, with a total population of \(totalPopulation) people."
+    }
+    
+    func updateAsiaLabel()
+    {
+        let totalCountries = World.values.reduce(0) { $0 + $1.count }
+        let totalPopulation = World.values.reduce(0) { ($1["population"] as? Int) ?? 0}
+        NorthAmericaLabel.text = "There are \(totalCountries) countries in North America, with a total population of \(totalPopulation) people."
+    }
+    
+    func updateOceaniaLabel()
+    {
+        let totalCountries = World.values.reduce(0) { $0 + $1.count }
+        let totalPopulation = World.values.reduce(0) { ($1["population"] as? Int) ?? 0}
+        NorthAmericaLabel.text = "There are \(totalCountries) countries in North America, with a total population of \(totalPopulation) people."
+    }
+    
+    func updateAfricaLabel()
+    {
+        let totalCountries = World.values.reduce(0) { $0 + $1.count }
+        let totalPopulation = World.values.reduce(0) { ($1["population"] as? Int) ?? 0}
+        NorthAmericaLabel.text = "There are \(totalCountries) countries in North America, with a total population of \(totalPopulation) people."
+    }
+    
+    @IBAction func NorthAmericaButtonTapped(_ sender: UIButton)
+    {
+        guard let continentName = sender.titleLabel?.text else { return }
+        performSegue(withIdentifier: "showSecondVC", sender: continentName)
+    }
+    
+    @IBAction func SouthAmericaButtonTapped(_ sender: UIButton)
+    {
+        guard let continentName = sender.titleLabel?.text else { return }
+        performSegue(withIdentifier: "showSecondVC", sender: continentName)
+    }
+    
+    @IBAction func EuropeButtonTapped(_ sender: UIButton)
+    {
+        guard let continentName = sender.titleLabel?.text else { return }
+        performSegue(withIdentifier: "showSecondVC", sender: continentName)
+    }
+    
+    @IBAction func AsiaButtonTapped(_ sender: UIButton)
+    {
+        guard let continentName = sender.titleLabel?.text else { return }
+        performSegue(withIdentifier: "showSecondVC", sender: continentName)
+    }
+    
+    @IBAction func OceaniaButtonTapped(_ sender: UIButton)
+    {
+        guard let continentName = sender.titleLabel?.text else { return }
+        performSegue(withIdentifier: "showSecondVC", sender: continentName)
+    }
+    
+    @IBAction func AfrciaButtonTapped(_ sender: UIButton)
     {
         guard let continentName = sender.titleLabel?.text else { return }
         performSegue(withIdentifier: "showSecondVC", sender: continentName)

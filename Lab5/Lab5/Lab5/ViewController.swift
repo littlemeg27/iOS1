@@ -71,14 +71,14 @@ class ViewController: UIViewController, UITextFieldDelegate
             return
         }
 
-        performSegue(withIdentifier: "showSecondVC", sender: fieldTexts)
-    }
+            performSegue(withIdentifier: "showSecondVC", sender: fieldTexts)
+        }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == "showSecondVC", let secondVC = segue.destination as? SecondViewController, let fieldTexts = sender as? [String]
         {
-           secondVC.fieldTexts = fieldTexts
+            secondVC.fieldTexts = fieldTexts
         }
     }
 

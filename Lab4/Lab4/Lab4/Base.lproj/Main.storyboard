@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="M9b-eq-H2i">
             <objects>
-                <viewController id="Cil-9M-TNl" sceneMemberID="viewController">
+                <viewController id="Cil-9M-TNl" customClass="ViewController" customModule="Lab4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MmO-xj-CnT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,6 +22,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Europe"/>
                                 <connections>
+                                    <action selector="EuropeButtonTapped:" destination="Cil-9M-TNl" eventType="touchUpInside" id="ACO-2h-vo0"/>
                                     <segue destination="IrT-OC-tE8" kind="show" id="uia-wD-pdn"/>
                                 </connections>
                             </button>
@@ -31,6 +32,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Asia"/>
                                 <connections>
+                                    <action selector="AsiaButtonTapped:" destination="Cil-9M-TNl" eventType="touchUpInside" id="MGo-Eq-A0t"/>
                                     <segue destination="IrT-OC-tE8" kind="show" id="sRR-zy-hAv"/>
                                 </connections>
                             </button>
@@ -40,6 +42,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="South America"/>
                                 <connections>
+                                    <action selector="SouthAmericaButtonTapped:" destination="Cil-9M-TNl" eventType="touchUpInside" id="U63-BN-RFv"/>
                                     <segue destination="IrT-OC-tE8" kind="show" id="Ync-7q-ja3"/>
                                 </connections>
                             </button>
@@ -49,6 +52,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Africa"/>
                                 <connections>
+                                    <action selector="AfrciaButtonTapped:" destination="Cil-9M-TNl" eventType="touchUpInside" id="q3A-49-def"/>
                                     <segue destination="IrT-OC-tE8" kind="show" id="xJ5-T1-1hJ"/>
                                 </connections>
                             </button>
@@ -58,6 +62,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Oceania"/>
                                 <connections>
+                                    <action selector="OceaniaButtonTapped:" destination="Cil-9M-TNl" eventType="touchUpInside" id="beJ-4U-qAi"/>
                                     <segue destination="IrT-OC-tE8" kind="show" id="sQ8-hb-IS8"/>
                                 </connections>
                             </button>
@@ -67,6 +72,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="North America"/>
                                 <connections>
+                                    <action selector="NorthAmericaButtonTapped:" destination="Cil-9M-TNl" eventType="touchUpInside" id="h5P-7w-6xG"/>
                                     <segue destination="IrT-OC-tE8" kind="show" id="ZYV-qY-dd5"/>
                                 </connections>
                             </button>
@@ -116,15 +122,23 @@
                         <viewLayoutGuide key="safeArea" id="peW-1x-8Fg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="AfricaLabel" destination="Aa5-nm-zcf" id="w6d-1D-cxf"/>
+                        <outlet property="AsiaLabel" destination="aui-ur-ju5" id="YgD-BV-l9x"/>
+                        <outlet property="EuropeLabel" destination="OV7-o5-lsl" id="sI4-s6-0hv"/>
+                        <outlet property="NorthAmericaLabel" destination="eRf-9t-Qjl" id="R0g-Qa-GLW"/>
+                        <outlet property="OceaniaLabel" destination="aNs-dd-E0m" id="plp-rM-zOC"/>
+                        <outlet property="SoutAmericaLabel" destination="SK8-Uh-iio" id="K73-ZC-aWI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXn-Qr-02U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="14.503816793893129" y="374.64788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="sUj-SP-1xG">
             <objects>
-                <viewController id="IrT-OC-tE8" sceneMemberID="viewController">
+                <viewController id="IrT-OC-tE8" customClass="SecondViewController" customModule="Lab4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dTe-6J-WX5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,18 +164,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Go Back"/>
+                                <connections>
+                                    <action selector="GoBackButton:" destination="IrT-OC-tE8" eventType="touchUpInside" id="07h-0M-3hO"/>
+                                    <action selector="goBackButton:" destination="IrT-OC-tE8" eventType="touchUpInside" id="pnZ-Wl-i6e"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgV-9f-Iws">
                                 <rect key="frame" x="136" y="678" width="120" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Add Country"/>
+                                <connections>
+                                    <action selector="AddCountryButton:" destination="IrT-OC-tE8" eventType="touchUpInside" id="wdl-j3-hMR"/>
+                                    <action selector="addCountryButton:" destination="IrT-OC-tE8" eventType="touchUpInside" id="LX7-6d-tWH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aD4-X5-iQ4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="HGL-GF-jLu"/>
+                    <connections>
+                        <outlet property="continentLabel" destination="dQo-gB-zWI" id="beA-Iw-OHU"/>
+                        <outlet property="continentTextView" destination="WHK-Dm-wk8" id="JM7-V4-IPi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvx-3r-rGF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,7 +196,7 @@
         <!--Third View Controller-->
         <scene sceneID="a9d-QC-5bp">
             <objects>
-                <viewController id="FCZ-nv-wfm" userLabel="Third View Controller" sceneMemberID="viewController">
+                <viewController id="FCZ-nv-wfm" userLabel="Third View Controller" customClass="ThirdViewController" customModule="Lab4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NLw-I1-Iul">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
