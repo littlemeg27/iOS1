@@ -108,6 +108,7 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Go to Second View"/>
                                 <connections>
                                     <action selector="goToSecondViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F5F-g4-z43"/>
+                                    <segue destination="F1J-n5-jHO" kind="show" id="aBf-GA-B68"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -133,7 +134,7 @@
             <objects>
                 <viewController id="F1J-n5-jHO" customClass="SecondViewController" customModule="Lab5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A9M-ts-wyh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLw-7I-YuL">
@@ -200,6 +201,7 @@
                         <viewLayoutGuide key="safeArea" id="bfr-ML-AXd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SxD-JY-nKH"/>
                     <connections>
                         <outlet property="label1" destination="XEA-zk-KcP" id="uCF-e4-7Bl"/>
                         <outlet property="label2" destination="bOq-DX-zlg" id="lhy-sq-o9T"/>

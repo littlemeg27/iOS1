@@ -16,18 +16,18 @@ class SecondViewController: UIViewController
     @IBOutlet weak var label5: UILabel!
     @IBOutlet weak var label6: UILabel!
        
-    var fieldTexts: [String] = []
+    var textFields: [String] = []
        
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        label1.text = fieldTexts[0]
-        label2.text = fieldTexts[1]
-        label3.text = fieldTexts[2]
-        label4.text = fieldTexts[3]
-        label5.text = fieldTexts[4]
-        label6.text = fieldTexts[5]
+        label1.text = textFields[0]
+        label2.text = textFields[1]
+        label3.text = textFields[2]
+        label4.text = textFields[3]
+        label5.text = textFields[4]
+        label6.text = textFields[5]
     }
 
     @IBAction func cancelButtonTapped(_ sender: UIButton)
@@ -37,11 +37,11 @@ class SecondViewController: UIViewController
 
     @IBAction func reduceButtonTapped(_ sender: UIButton)
     {
-        let reducedString = fieldTexts.reduce("") { $0 + " " + $1 }
+        let reducedString = textFields.reduce("") { $0 + " " + $1 }
 
-        if let firstVC = navigationController?.viewControllers.first as? ViewController
+        if let ViewController = navigationController?.viewControllers.first as? ViewController
         {
-            firstVC.updateLabel(with: reducedString)
+            ViewController.updateLabel(with: reducedString)
         }
 
         navigationController?.popViewController(animated: true)

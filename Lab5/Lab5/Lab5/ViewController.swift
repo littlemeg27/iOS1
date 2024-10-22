@@ -63,22 +63,22 @@ class ViewController: UIViewController, UITextFieldDelegate
     @IBAction func goToSecondViewController(_ sender: UIButton)
     {
         let fields = [textField1, textField2, textField3, textField4, textField5, textField6]
-        let fieldTexts = fields.compactMap { $0?.text }
+        let textFields = fields.compactMap { $0?.text }
 
-        guard fieldTexts.allSatisfy({ !$0.isEmpty }) else
+        guard textFields.allSatisfy({ !$0.isEmpty }) else
         {
             showAlert(message: "Please fill in all fields")
             return
         }
 
-            performSegue(withIdentifier: "showSecondVC", sender: fieldTexts)
+            performSegue(withIdentifier: "showSecondVC", sender: textFields)
         }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "showSecondVC", let secondVC = segue.destination as? SecondViewController, let fieldTexts = sender as? [String]
+        if segue.identifier == "showSecondVC", let SecondViewController = segue.destination as? SecondViewController, let textFields = sender as? [String]
         {
-            secondVC.fieldTexts = fieldTexts
+            SecondViewController.textFields = textFields
         }
     }
 
