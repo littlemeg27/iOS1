@@ -12,23 +12,23 @@ class DogObject
     // Stored Properties
     var breed: String
     var age: Int
-    var isActive: Bool
+    var isSpayedOrNeutered: Bool
     
     // Computed Properties
     var status: String
     {
-        return isActive ? "Active" : "Inactive"
+        return isSpayedOrNeutered ? "Spayed" : "Neutered"
     }
     
     var ageCategory: String
     {
         switch age
         {
-        case 0...24:
+        case 0...2:
             return "Puppy"
-        case 13...19:
-            return "Teenager"
-        case 20...64:
+        case 3...4:
+            return "Young Adult"
+        case 5...8:
             return "Adult"
         default:
             return "Senior"
@@ -40,20 +40,20 @@ class DogObject
     {
         self.breed = "Default Name"
         self.age = 0
-        self.isActive = false
+        self.isSpayedOrNeutered = false
     }
     
-    init(name: String, age: Int, isActive: Bool)
+    init(name: String, age: Int, isSpayedOrNeutered: Bool)
     {
         self.breed = name
         self.age = age
-        self.isActive = isActive
+        self.isSpayedOrNeutered = isSpayedOrNeutered
     }
     
     // Instance Methods
     func toggleActiveStatus()
     {
-        isActive.toggle()
+        isSpayedOrNeutered.toggle()
     }
     
     func incrementAge()

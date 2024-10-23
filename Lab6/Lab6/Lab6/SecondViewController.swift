@@ -13,7 +13,7 @@ class SecondViewController: UIViewController
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
-    @IBOutlet weak var isActiveSwitch: UISwitch!
+    @IBOutlet weak var isFixedSwitch: UISwitch!
     
     override func viewDidLoad()
     {
@@ -23,7 +23,7 @@ class SecondViewController: UIViewController
         
         nameTextField.text = DogObject.breed
         ageTextField.text = "\(DogObject.age)"
-        isActiveSwitch.isOn = DogObject.isActive
+        isFixedSwitch.isOn = DogObject.isSpayedOrNeutered
     }
     
     @IBAction func saveChanges(_ sender: UIButton)
@@ -37,7 +37,7 @@ class SecondViewController: UIViewController
         }
             DogObject.breed = name
             DogObject.age = age
-            DogObject.isActive = isActiveSwitch.isOn
+            DogObject.isSpayedOrNeutered = isFixedSwitch.isOn
             navigationController?.popViewController(animated: true)
         }
         

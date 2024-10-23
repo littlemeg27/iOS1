@@ -13,7 +13,7 @@ class ViewController: UIViewController
     
     @IBOutlet weak var breedLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var isActiveLabel: UILabel!
+    @IBOutlet weak var isFixedLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var ageCategoryLabel: UILabel!
     
@@ -24,7 +24,7 @@ class ViewController: UIViewController
         
         breedLabel.text = DogObject.breed
         ageLabel.text = "\(DogObject.age)"
-        isActiveLabel.text = "\(DogObject.isActive)"
+        isFixedLabel.text = "\(DogObject.isSpayedOrNeutered)"
         statusLabel.text = DogObject.status
         ageCategoryLabel.text = DogObject.ageCategory
     }
@@ -32,7 +32,7 @@ class ViewController: UIViewController
     @IBAction func toggleActiveStatus(_ sender: UIButton)
     {
         DogObject.toggleActiveStatus()
-        isActiveLabel.text = "\(DogObject.isActive)"
+        isFixedLabel.text = "\(DogObject.isSpayedOrNeutered)"
         statusLabel.text = DogObject.status
     }
         
@@ -52,7 +52,8 @@ class ViewController: UIViewController
     {
         if segue.identifier == "toSecondViewController"
         {
-            let secondVC = segue.destination as! SecondViewController secondVC.DogObject = DogObject
+            let secondVC = segue.destination as! SecondViewController
+            secondVC.DogObject = DogObject
         }
     }
 
