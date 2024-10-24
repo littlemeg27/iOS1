@@ -9,12 +9,10 @@ import Foundation
 
 class DogObject
 {
-    // Stored Properties
     var breed: String
     var age: Int
     var isSpayedOrNeutered: Bool
     
-    // Computed Properties
     var status: String
     {
         return isSpayedOrNeutered ? "Spayed" : "Neutered"
@@ -34,23 +32,21 @@ class DogObject
             return "Senior"
         }
     }
-    
-    // Initializers
+
     init()
     {
-        self.breed = "Default Name"
+        self.breed = "Standard Poodle"
         self.age = 0
         self.isSpayedOrNeutered = false
     }
     
-    init(name: String, age: Int, isSpayedOrNeutered: Bool)
+    init(breed: String, age: Int, isSpayedOrNeutered: Bool)
     {
-        self.breed = name
+        self.breed = breed
         self.age = age
         self.isSpayedOrNeutered = isSpayedOrNeutered
     }
-    
-    // Instance Methods
+
     func toggleActiveStatus()
     {
         isSpayedOrNeutered.toggle()

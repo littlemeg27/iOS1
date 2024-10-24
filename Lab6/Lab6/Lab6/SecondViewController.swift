@@ -11,7 +11,7 @@ class SecondViewController: UIViewController
 {
     var DogObject: DogObject!
     
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var breedTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var isFixedSwitch: UISwitch!
     
@@ -21,14 +21,14 @@ class SecondViewController: UIViewController
 
         // Do any additional setup after loading the view.
         
-        nameTextField.text = DogObject.breed
+        breedTextField.text = DogObject.breed
         ageTextField.text = "\(DogObject.age)"
         isFixedSwitch.isOn = DogObject.isSpayedOrNeutered
     }
     
     @IBAction func saveChanges(_ sender: UIButton)
     {
-        guard let name = nameTextField.text, !name.isEmpty,
+        guard let name = breedTextField.text, !name.isEmpty,
         let ageText = ageTextField.text, !ageText.isEmpty,
         let age = Int(ageText) else
         {
