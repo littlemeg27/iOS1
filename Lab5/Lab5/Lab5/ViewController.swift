@@ -76,9 +76,10 @@ class ViewController: UIViewController, UITextFieldDelegate
 
         override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "showSecondVC", let SecondViewController = segue.destination as? SecondViewController, let textFields = sender as? [String]
+        if segue.identifier == "showSecondVC", let secondVC:SecondViewController = segue.destination as? SecondViewController, let textFields = sender as? [String]
         {
-            SecondViewController.textFields = textFields
+            let secondVC = segue.destination as! SecondViewController
+            secondVC.textFields = [textField1.text!, textField2.text!, textField3.text!, textField4.text!, textField5.text!, textField6.text!]
         }
     }
 

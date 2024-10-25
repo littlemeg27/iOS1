@@ -52,11 +52,9 @@ class ViewController: UIViewController
     {
         if segue.identifier == "toSecondViewController"
         {
-            let secondVC = segue.destination as! SecondViewController
+            let secondVC: SecondViewController = segue.destination as! SecondViewController
             secondVC.DogObject = DogObject
         }
     }
-
-
 }
 
